@@ -4,7 +4,7 @@ Simple Windows Security Audit tool - enumerate processes using 3 different APIs(
 
 ## Features
 
-- **Process enumeration via 3 methods: **
+- ** Process enumeration via 3 methods: **
   - `CreateToolHelp32Snapshot` (ToolHelp) - full list inclduing all of system processes
   - `EnumProcesses` (PSAPI) - access-limited without protected processes
   - `NtQuerySystemInformation` (NTAPI) - undocumented, bypasses some hooks
