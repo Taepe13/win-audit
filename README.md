@@ -34,7 +34,7 @@ Simple Windows Security Audit tool - enumerate processes using 3 different APIs(
   Method 2: EnumProcesses (PSAPI)
     Uses EnumProcesses to get array of PIDs, then getting their names by OpenProcess + EnumProcessModules + GetModuleBaseNameW. Works without SeDebugPrivilege for user processes and skipping protected/system processes 
 
-  Method3: NtQuerySystemInformation (NTAPI)
+  Method 3: NtQuerySystemInformation (NTAPI)
     Uses undocumented NtQuerySistemInformation (that was found in the open-source Windows structures ReactOS) with SystemProccessInformation. Returns an array of SYSTEM_PROCESS_INFORMATION structures filled by processes. This method calls to ntdll directly and bypasses some user-mode hooks.
 
 ## Requirements
@@ -46,6 +46,8 @@ Simple Windows Security Audit tool - enumerate processes using 3 different APIs(
 ```cmd
 build.bat
 win-audit.exe
+
+
 
 Author
     Taepe13 - Offensive Security Engineer
